@@ -2,6 +2,16 @@ st - simple terminal
 --------------------
 st is a simple terminal emulator for X which sucks less.
 
+Workflow for patching and updating
+---------------------
+clone from ggadget6/st
+do git remote add suckless https://git.suckless.org/st
+apply patches to branch "custom"
+set upstream for master branch to suckless
+When updating, switch to master branch and pull
+Then, switch to custom branch and rebase to commit (git rebase --onto <commit> master)
+To push, do git config remote.pushdefault origin, then git config push.default current
+Then feel free to push
 
 Requirements
 ------------
